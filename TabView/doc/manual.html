@@ -1,0 +1,511 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>TabView</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0in;
+	margin-bottom:.0001pt;
+	background:navy;
+	font-size:12.0pt;
+	font-family:Tahoma;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:16.0pt;font-family:Verdana'>TabView</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><i><span
+style='font-size:10.0pt;font-family:Verdana'>Version 1.0</span></i></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Description:</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This PHP component
+class is used to generate navigable tabs.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Usage:</span></b></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Require
+     the “tab_view.php” file in the PHP script you wish to write the tabs.</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>e.g.  require(“path/to/tree_view.php”)</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Instantiate
+     the TabView class.</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>e.g.  $TabView = new TabView;</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Set the
+     following TabView class properties (public variables):</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;BackColor
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Default:  #EEEEFF</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Sets the background color for tabs
+that are not selected.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;BodyBackground
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Default:  #FFFFFF</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Sets the background color for the TabView area to match
+the background color of the page.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=3 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;Class
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>The name of the style sheet class name that defines the
+styles for the tabs.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=4 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;ImagePath
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>The relative path to the TabView images.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=5 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;Orientation
+      = <i>(Integer)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Default:  0</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>0 = left aligns the tabs</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>1 = right aligns the tabs</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=6 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;QueryString
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>The query string to append to each of the tab URLs.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=7 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;SelectedBackColor
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Default:  #CCCCFF</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Sets the background color for the tab
+that has been selected.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=8 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;SelectedBold
+      = <i>(Boolean)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Default:  false</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>When set to true, bolds the text
+of the selected tab.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=9 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;SelectedForeColor
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Sets the font color for the tab
+that has been selected.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=10 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;StartTab
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Sets the tab that is selected when the page is first
+loaded by using the tab’s key value.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=11 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;Image
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Sets the image for all unselected tabs.  This setting can
+be overridden by each tab’s <i>Image</i> property.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=12 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;SelectedImage
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Sets the image for the selected tab.  This setting is
+overridden by each tab’s <i>SelectedImage</i> property.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=13 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;DHTML
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Adds user defined DHTML to each tab’s URL.  That is, you
+can add properties to the anchor tag &lt;a&gt; of each tab such as the <i>onClick</i>
+event.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=14 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$TabView-&gt;ForceDHTML
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Omits the <i>href</i> property of the anchor tag and uses
+only the DHTML property value for each tab’s URL.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Add tabs
+     using the <i>Add</i>() method of the TabView class.</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>$Tab =&amp; $TabView-&gt;Add($strKey, $strText, $strURL, $strTarget,
+$strCaption);</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>Where the given variables are defined as the following:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='margin-left:34.5pt;border-collapse:collapse'>
+ <tr style='height:14.2pt'>
+  <td width=82 valign=top style='width:.85in;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>strKey</span></i></p>
+  </td>
+  <td width=439 valign=top style='width:329.2pt;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Unique
+  key identifying a given tab.</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.2pt'>
+  <td width=82 valign=top style='width:.85in;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>strText</span></i></p>
+  </td>
+  <td width=439 valign=top style='width:329.2pt;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Text to
+  display on the tab.</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.2pt'>
+  <td width=82 valign=top style='width:.85in;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>strURL</span></i></p>
+  </td>
+  <td width=439 valign=top style='width:329.2pt;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Web
+  address to fetch when the tab is clicked.</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.2pt'>
+  <td width=82 valign=top style='width:.85in;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>strTarget</span></i></p>
+  </td>
+  <td width=439 valign=top style='width:329.2pt;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Target
+  frame or window name when fetching the address.</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.2pt'>
+  <td width=82 valign=top style='width:.85in;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>strCaption</span></i></p>
+  </td>
+  <td width=439 valign=top style='width:329.2pt;padding:2.9pt 2.9pt 2.9pt 2.9pt;
+  height:14.2pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Text
+  Tool Tip to display when the mouse hovers over the tab’s text.</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The <i>Add()</i>
+     method returns a pointer to the new Tab object that was created and added
+     to TabView.  You will notice in the last step that the <i>$Tab</i>
+     variable captured the pointer to the new Tab object returned by the by the
+     <i>Add()</i> method.  The Tab class has several additional properties that
+     can be set after the tab has been created:</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$Tab-&gt;ForeColor
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Sets the font color for the given
+tab.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$Tab-&gt;Bold
+      = <i>(Boolean)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>Controls whether or not the tab’s
+text is bold.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=3 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$Tab-&gt;Image
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Sets the image for the tab when it is not selected.  This
+setting overrides the TabView class <i>Image</i> property.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=4 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$Tab-&gt;SelectedImage
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Sets the image for the tab when it is selected.  This
+setting is overrides the TabView class <i>SelectedImage</i> property.</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=5 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$Tab-&gt;DHTML
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Adds user defined DHTML to the given tab’s URL.  That is,
+you can add properties to the anchor tag &lt;a&gt; of this tab such as the <i>onClick</i>
+event.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=6 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$Tab-&gt;ForceDHTML
+      = <i>(String)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Omits the <i>href</i> property of the anchor tag and uses
+only the DHTML property value for the given tab’s URL.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=7 type=a>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>$Tab-&gt;TabWidth
+      = <i>(Integer)</i></span></li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Defines the width of the given tab measured in pixels.</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>To display
+     TabView simply call the <i>Show()</i> method:</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in'><span
+style='font-size:10.0pt;font-family:Verdana'>e.g.  $TabView-&gt;Show();</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

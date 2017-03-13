@@ -1,0 +1,74 @@
+Post Beta 1 issues herePosted: Apr 23, 2005 02:46:20<br />
+Quote <br />
+<br />
+When installing MyLocations it did not place link into start menu anywhere I could find so had to create by my self. Also how often does it update weather data?Posted: Apr 23, 2005 16:22:59<br />
+Quote <br />
+<br />
+Hi, <br />
+<br />
+This beta version only creates a shortcut icon on your desktop and no where else. <br />
+<br />
+This will definately be added to future beta releases. <br />
+<br />
+The weather data is updated hourly. <br />
+<br />
+Hope this helpsPosted: Apr 24, 2005 05:38:33<br />
+Quote <br />
+<br />
+The software works well so far although it seems that weather data is not available for all areas. Also I am wondering if the home location on the left could be a city that would also display weather rather than just a time zone then I could get an exter city on the other side.Posted: Apr 24, 2005 05:38:33<br />
+Quote <br />
+<br />
+The software works well so far although it seems that weather data is not available for all areas. Also I am wondering if the home location on the left could be a city that would also display weather rather than just a time zone then I could get an exter city on the other side.Posted: Apr 27, 2005 19:38:57<br />
+Quote <br />
+<br />
+If the weather data is not available for an area, a window will pop up to allow you to select the closest city to the location being monitored. <br />
+<br />
+The home location shows the time as set in the Control Panel-&gt;Dats &amp; Time. it is time zone based, not lcoation based. The weather forecast, however is location based. To set the weather for your home location, right click on the city where you live, and choose 'Set as Home'Please list features you wish implemented in MyLocations here <br />
+<br />
+Please bear in mind that &quot;My Locations&quot; is primarily a world time management application. The weather feature is just one feature that I thought would be useful information and as such was implemented on the initial beta release. <br />
+<br />
+If you have any suggestions on what information you would like associated with your locations of interest, please post a suggestion.Posted: Apr 22, 2005 12:55:59<br />
+Quote <br />
+<br />
+Just a few UI things: <br />
+<br />
+* Put program icon in executable <br />
+* In XP, Get UI colors &amp; fonts from theme, rather than hard code them <br />
+* All user to add/edit locations <br />
+* Am/Pm should be AM/PM <br />
+* Install should create start menu group, or ask the user if they wish to have oneJust a few UI things: <br />
+<br />
+* Put program icon in executable <br />
+* In XP, Get UI colors &amp; fonts from theme, rather than hard code them <br />
+* All user to add/edit locations <br />
+* Am/Pm should be AM/PM <br />
+* Install should create start menu group, or ask the user if they wish to have one <br />
+<br />
+Thanks for your suggestions. I will implement them in future releases. <br />
+<br />
+<br />
+* Put program icon in executable <br />
+May I ask why the reasoning for this ?<b>Great program. Can't wait to see how this program ends up once the beta is finished</b> :)great softwareI sure doIt would be nice to be able to edit the data, such as City Names, when they are not correctly shown.Yes, Definately will provide a facility to add/edit locations in the next release.<br />
+<br />
+<b>Whats New:</b><br />
+<br />
+<ul type="square">
+<li>Ability to Edit locations. Right click on a location and choose edit or click Edit on the Location Details Panel
+<li>My Locations will now use the system theme colors. Prior only the blue theme was supported 
+<li>Some interface improvments
+</ul> <br />
+<br />
+<b>Quick Start</b><br />
+<br />
+<ul type="square">
+<li>Click on the locations Tab
+<li>Find your closest time of residence. Click on It
+<li>Press the Home button. Your local weather and time is now set up
+<li>Click on other locations of interest... Click Monitor
+</ul> <br />
+<br />
+Thanks it! Enjoy!Nice!The ability to edit Location Details was a great improvement over Beta 001. <br />
+<br />
+Another suggestion: it would be nice if the &quot;last&quot; window position and window size could be &quot;remembered&quot; after closing the program.<br />
+<br />
+Congratulations. You created a beautiful program. 

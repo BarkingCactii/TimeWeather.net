@@ -1,0 +1,1 @@
+<?php include_once "c:/Inetpub/wwwroot/forum/data\\include/GLOBALS.php"; ?>

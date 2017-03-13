@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usagedata>
+<month val="may 2003" total="3">
+<item str="http://203.219.138.166/worldtime.htm" cnt="1" />
+<item str="http://203.219.138.166/default.htm" cnt="1" />
+<item str="http://203.219.138.166/" cnt="1" />
+</month>
+<month val="jun 2003" total="5">
+<item str="http://203.219.138.166/" cnt="3" />
+<item str="http://www.pcmcomputers.webcentral.com.au/worldtime.htm" cnt="2" />
+</month>
+<month val="sep 2003" total="1">
+<item str="http://jeffs-software.com/" cnt="1" />
+</month>
+</usagedata>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usagedata>
+<month val="may 2003" total="3">
+<item str="203.219.138.166" cnt="3" />
+</month>
+<month val="jun 2003" total="5">
+<item str="203.219.138.166" cnt="3" />
+<item str="www.pcmcomputers.webcentral.com.au" cnt="2" />
+</month>
+<month val="sep 2003" total="1">
+<item str="jeffs-software.com" cnt="1" />
+</month>
+</usagedata>
