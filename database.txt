@@ -1,0 +1,125 @@
+Database schema
+
+Comments
+	id
+	date
+	productid
+	remoteip
+	comment
+Hitcounters
+	id
+	pageId
+	hits
+
+webpages
+	id
+	url
+product_details
+	id
+	date
+	name
+	description
+	buylink
+	sitelink
+	downloadlink
+	screenshotlink
+	briefdescription
+	3rdParty
+visitlog
+	id
+	date
+	referrer
+	ipaddress
+	hostaddress
+products
+	id
+	product_details_id
+news
+	id
+	date
+	title
+	description
+
+
+
+
+====================================
+$query = 'insert into comments values ( "'.date('Y-m-d').' '.date('H:i:00').'","'.PRODUCT.'","'.$_SERVER['REMOTE_ADDR'].'","'.$s
+ubject.$comment.'")';
+
+    $query = 'SELECT * FROM hitcounters where pageID like '.$row->pageID;
+
+    $query = 'UPDATE hitcounters SET hits='.$hits.' WHERE pageID='.$pageID;
+
+    $query = 'SELECT * FROM webpages where name like "'.$url.'"';
+
+$query = 'insert into product_details values ( "'.date('Y-m-d').' '.date('H:i:00').'","'.$name.'","'.$description.'","'.$buylink
+.'","'.$sitelink.'","'.$downloadlink.'","'.$screenshotlink.'","'.$briefdescription.'","'.'1'.'","'.'0'.'","'.'200'.'","
+","'.$screenshottnlink.'","1" )';
+
+    $query = 'SELECT * FROM visitlog order by date';
+
+       $query2 = 'SELECT * FROM hitcounters where pageID like '.$row->pageID;
+
+    $query = 'SELECT * FROM webpages';
+
+       $query2 = 'SELECT * FROM hitcounters where pageID like '.$row->pageID;
+
+    $query = 'UPDATE hitcounters SET hits='.$hits.' WHERE pageID='.$pageID;
+
+    $query = "insert into visitlog values ('".$pageID."','".$_SERVER['REMOTE_ADDR']."','".$_SERVER['HTTP_REFERER']."','".date('Y
+-m-d').' '.date('H:i:00')."','".gethostbyaddr( $_SERVER['REMOTE_ADDR'] )."' )";
+
+    $query = 'SELECT * FROM products where ID like '.$whichProduct;
+
+    $query = "SELECT * from news ";
+
+    if ( $whichProduct != 0 )
+        $query = $query."where productID = ".$whichProduct;
+
+    $query = $query." order by date desc "; // limit 2";
+
+$query = 'insert into comments values ( "'.date('Y-m-d').' '.date('H:i:00').'","'.PRODUCT.'","'.$_SERVER['REMOTE_ADDR'].'","'.$c
+omment.'")';
+
+    if ( isset ( $productname ))
+    {
+        $query = 'SELECT * from product_details where id = "'.$productname.'"';
+    }
+    else
+    {
+//  $query = "SELECT * from product_details order by date desc ";
+    $query = 'SELECT * from product_details where 3rdparty like '.$thirdparty;
+    $query = $query.' order by date desc';
+    }
+
+    $query = 'SELECT * FROM products where ID like '.$whichProduct;
+
+    $query = 'SELECT * from product_details where ';
+
+    for ( $i = 0; $i < $numKeywords; $i++ )
+    {
+        if ( $i == 0 )
+            $query = $query.' description like "%'.$keywords[$i].'%" ';
+        else
+            $query = $query.' or description like "%'.$keywords[$i].'%" ';
+    }
+
+    $query = $query." order by date desc "; // limit 2";
+
+
+    $query = 'SELECT * from news where ';
+
+    for ( $i = 0; $i < $numKeywords; $i++ )
+    {
+        if ( $i == 0 )
+            $query = $query.' description like "%'.$keywords[$i].'%" ';
+        else
+            $query = $query.' or description like "%'.$keywords[$i].'%" ';
+//      echo $keywords[$i];
+    }
+
+    $query = $query." order by date desc "; // limit 2";
+
+    $query = 'SELECT * FROM visitlog order by date desc';
+
